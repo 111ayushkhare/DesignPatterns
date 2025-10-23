@@ -30,7 +30,7 @@ IF EXIST DecoratorPattern\Pizza.class IF EXIST DecoratorPattern\StarbuzzCoffee.c
 )
 
 REM Factory Pattern
-IF EXIST FactoryPattern\PizzaAbstractFactory.class (
+IF EXIST FactoryPattern\PizzaFactory.class (
     echo [Factory Pattern]
     echo ----------------------------------------------------
     java FactoryPattern.PizzaFactory

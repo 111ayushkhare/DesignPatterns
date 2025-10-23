@@ -31,7 +31,7 @@ if [ -f DecoratorPattern/Pizza.class ] && [ -f DecoratorPattern/StarbuzzCoffee.c
 fi
 
 # Factory Pattern
-if [ -f FactoryPattern/PizzaAbstractFactory.class ]; then
+if [ -f FactoryPattern/PizzaFactory.class ]; then
   echo "[Factory Pattern]"
   echo "----------------------------------------------------" 
   java FactoryPattern.PizzaFactory
