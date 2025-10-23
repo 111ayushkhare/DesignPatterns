@@ -1,3 +1,5 @@
+package DecoratorPattern;
+
 public class Pizza {
 	public static void main(String[] args) {
 		// Margherita + ExtraCheese 

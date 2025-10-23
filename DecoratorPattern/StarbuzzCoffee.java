@@ -1,3 +1,5 @@
+package DecoratorPattern;
+
 public class StarbuzzCoffee {
 	public static void main(String[] args) {
 		Espresso espresso = new Espresso();
