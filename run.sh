@@ -51,12 +51,17 @@ fi
 if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] && 
 	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoiler.class ] &&
 	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerThreadSafe.class ] &&
-	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerLockDoubleCheck.class ]; then
+	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerLockDoubleCheck.class ] &&
+	[ -f SingletonPattern/SingletonChocolateBoilerEnum/ChocolateBoilerDemo.class ]; then
   	echo "[Singleton Pattern]"
   	echo "----------------------------------------------------" 
+  	echo ">> ChocolateBoiler - by STATIC"
   	cd ./SingletonPattern
   	java SingletonChocolateBoiler.ChocolateBoilerDemo
-  	cd ..
+  	echo
+  	echo ">> ChocolateBoiler - By ENUM"
+  	java SingletonChocolateBoilerEnum.ChocolateBoilerDemo
+  	cd ../
   	echo "----------------------------------------------------"
 fi
 

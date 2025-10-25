@@ -51,12 +51,18 @@ IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerDemo.class (
     IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoiler.class (
         IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerThreadSafe.class (
             IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerLockDoubleCheck.class (
-                echo [Singleton Pattern]
-                echo ----------------------------------------------------
-                cd SingletonPattern
-                java SingletonChocolateBoiler.ChocolateBoilerDemo
-                cd ..
-                echo ----------------------------------------------------
+                IF EXIST SingletonPattern\SingletonChocolateBoilerEnum\ChocolateBoilerDemo.class (
+                    echo [Singleton Pattern]
+                    echo ----------------------------------------------------
+                    cd SingletonPattern
+                    echo >> ChocolateBoiler - by STATIC
+                    java SingletonChocolateBoiler.ChocolateBoilerDemo
+                    echo
+                    echo >> ChocolateBoiler - by ENUM
+                    java SingletonChocolateBoilerEnum.ChocolateBoilerDemo
+                    cd ..
+                    echo ----------------------------------------------------
+                )
             )
         )
     )
