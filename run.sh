@@ -52,7 +52,8 @@ if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] &&
 	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoiler.class ] &&
 	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerThreadSafe.class ] &&
 	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerLockDoubleCheck.class ] &&
-	[ -f SingletonPattern/SingletonChocolateBoilerEnum/ChocolateBoilerDemo.class ]; then
+	[ -f SingletonPattern/SingletonChocolateBoilerEnum/ChocolateBoilerDemo.class ] && 
+	[ -f SingletonPattern/SingletonChocolateBoilerEnumVsStatic/ChocolateBoilerThreadSafetyDemo.class ]; then
   	echo "[Singleton Pattern]"
   	echo "----------------------------------------------------" 
   	echo ">> ChocolateBoiler - by STATIC"
@@ -61,7 +62,10 @@ if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] &&
   	echo
   	echo ">> ChocolateBoiler - By ENUM"
   	java SingletonChocolateBoilerEnum.ChocolateBoilerDemo
-  	cd ../
+  	echo
+  	echo ">> ChocolateBoiler - ENUM vs STATIC"
+  	java SingletonChocolateBoilerEnumVsStatic.ChocolateBoilerThreadSafetyDemo
+  	cd ..
   	echo "----------------------------------------------------"
 fi
 
