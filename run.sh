@@ -8,7 +8,8 @@ echo "===================================================="
 echo
 echo "Compiling source files..."
 
-javac */*.java
+find . -name "*.java" > source.txt
+javac @source.txt
 if [ $? -ne 0 ]; then
 	echo "Compilation failed."
 	exit 1
@@ -45,6 +46,21 @@ if [ -f AbstractFactoryPattern/PizzaAbstractFactory.class ]; then
   java AbstractFactoryPattern.PizzaAbstractFactory
   echo "----------------------------------------------------"
 fi
+
+# Singleton Pattern
+if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] && 
+	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoiler.class ] &&
+	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerThreadSafe.class ] &&
+	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerLockDoubleCheck.class ]; then
+  	echo "[Singleton Pattern]"
+  	echo "----------------------------------------------------" 
+  	cd ./SingletonPattern
+  	java SingletonChocolateBoiler.ChocolateBoilerDemo
+  	cd ..
+  	echo "----------------------------------------------------"
+fi
+
+rm source.txt
 
 echo 
 echo "All patterns executed successfully!"

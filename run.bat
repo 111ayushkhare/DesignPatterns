@@ -7,7 +7,8 @@ REM Compile all Java files
 echo.
 echo Compiling source files...
 
-javac */*.java
+dir /s /b *.java > source.txt
+javac @source.txt
 IF %ERRORLEVEL% NEQ 0 (
     echo Compilation failed.
     exit /b 1
@@ -44,6 +45,25 @@ IF EXIST AbstractFactoryPattern\PizzaAbstractFactory.class (
     java AbstractFactoryPattern.PizzaAbstractFactory
     echo ----------------------------------------------------
 )
+
+REM Singleton Pattern
+IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerDemo.class (
+    IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoiler.class (
+        IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerThreadSafe.class (
+            IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerLockDoubleCheck.class (
+                echo [Singleton Pattern]
+                echo ----------------------------------------------------
+                cd SingletonPattern
+                java SingletonChocolateBoiler.ChocolateBoilerDemo
+                cd ..
+                echo ----------------------------------------------------
+            )
+        )
+    )
+)
+
+
+DEL source.txt
 
 echo.
 echo All patterns executed successfully!

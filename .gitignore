@@ -3,3 +3,6 @@
 
 ## Code generated
 *.class
+
+## Info generated
+*.txt
