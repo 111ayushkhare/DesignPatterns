@@ -1,4 +1,4 @@
-package SingletonChocolateBoilerEnumVsStatic;
+package singleton.chocolateboilerenumvsstatic;
 
 class ChocolateBoiler {
 	private boolean empty; 

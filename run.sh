@@ -9,7 +9,7 @@ echo
 echo "Compiling source files..."
 
 find . -name "*.java" > source.txt
-javac @source.txt
+javac -d out/classes @source.txt
 if [ $? -ne 0 ]; then
 	echo "Compilation failed."
 	exit 1
@@ -20,64 +20,59 @@ echo "Running examples..."
 echo "----------------------------------------------------"
 
 # Decorator Pattern
-if [ -f DecoratorPattern/Pizza.class ] && [ -f DecoratorPattern/StarbuzzCoffee.class ]; then
+if [ -f ./out/classes/decorator/Pizza.class ] && [ -f ./out/classes/decorator/StarbuzzCoffee.class ]; then
 	echo "[DecoratorPattern]"
 	echo "----------------------------------------------------" 
 	echo ">> Pizza"
-	java DecoratorPattern.Pizza
+	java -cp out/classes decorator.Pizza
 	echo 
 	echo ">> StarbuzzCoffee"
-	java DecoratorPattern.StarbuzzCoffee
+	java -cp out/classes decorator.StarbuzzCoffee
 	echo "----------------------------------------------------"
 fi
 
 # Factory Pattern
-if [ -f FactoryPattern/PizzaFactory.class ]; then
+if [ -f ./out/classes/factory/PizzaFactory.class ]; then
   echo "[Factory Pattern]"
   echo "----------------------------------------------------" 
-  java FactoryPattern.PizzaFactory
+  java -cp out/classes factory.PizzaFactory
   echo "----------------------------------------------------"
 fi
 
 # Abstract Factory Pattern
-if [ -f AbstractFactoryPattern/PizzaAbstractFactory.class ]; then
+if [ -f ./out/classes/abstractfactory/PizzaAbstractFactory.class ]; then
   echo "[Abstract Factory Pattern]"
   echo "----------------------------------------------------" 
-  java AbstractFactoryPattern.PizzaAbstractFactory
+  java -cp out/classes abstractfactory.PizzaAbstractFactory
   echo "----------------------------------------------------"
 fi
 
 # Singleton Pattern
-if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] && 
-	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoiler.class ] &&
-	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerThreadSafe.class ] &&
-	[ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerLockDoubleCheck.class ] &&
-	[ -f SingletonPattern/SingletonChocolateBoilerEnum/ChocolateBoilerDemo.class ] && 
-	[ -f SingletonPattern/SingletonChocolateBoilerEnumVsStatic/ChocolateBoilerThreadSafetyDemo.class ]; then
+if [ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerDemo.class ] && 
+	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoiler.class ] &&
+	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerThreadSafe.class ] &&
+	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerLockDoubleCheck.class ] &&
+	[ -f ./out/classes/singleton/chocolateboilerenum/ChocolateBoilerDemo.class ] && 
+	[ -f ./out/classes/singleton/chocolateboilerenumvsstatic/ChocolateBoilerThreadSafetyDemo.class ]; then
   	echo "[Singleton Pattern]"
   	echo "----------------------------------------------------" 
   	echo ">> ChocolateBoiler - by STATIC"
-  	cd ./SingletonPattern
-  	java SingletonChocolateBoiler.ChocolateBoilerDemo
+  	java -cp out/classes singleton.chocolateboiler.ChocolateBoilerDemo
   	echo
   	echo ">> ChocolateBoiler - By ENUM"
-  	java SingletonChocolateBoilerEnum.ChocolateBoilerDemo
+  	java -cp out/classes singleton.chocolateboilerenum.ChocolateBoilerDemo
   	echo
   	echo ">> ChocolateBoiler - ENUM vs STATIC"
-  	java SingletonChocolateBoilerEnumVsStatic.ChocolateBoilerThreadSafetyDemo
-  	cd ..
+  	java -cp out/classes singleton.chocolateboilerenumvsstatic.ChocolateBoilerThreadSafetyDemo
   	echo "----------------------------------------------------"
 fi
 
 # Strategy Pattern
-if [ -f StrategyPattern/strategypaymentprocessing/Driver.class ]; then 
+if [ -f ./out/classes/strategy/paymentprocessing/Driver.class ]; then 
 	echo "[StrategyPattern]" 
 	echo "----------------------------------------------------"
 	echo ">> PaymentPocessingStrategy" 
-	cd ./StrategyPattern 
-	java strategypaymentprocessing.Driver
-	echo
-	cd ..
+	java -cp out/classes strategy.paymentprocessing.Driver
 	echo "----------------------------------------------------" 
 fi
 

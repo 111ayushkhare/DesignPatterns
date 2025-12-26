@@ -1,25 +1,21 @@
-package SingletonChocolateBoilerEnum; 
+package singleton.chocolateboiler;
 
-public class ChocolateBoilerDemo {
-	public static void main(String[] args) {
-		ChocolateBoilerEnum boiler = ChocolateBoilerEnum.INSTANCE;
-
-		boiler.fill();
-		boiler.drain();
-		boiler.boil();
-	} 
-} 
-
-enum ChocolateBoilerEnum {
-	INSTANCE; 
-
+public class ChocolateBoilerThreadSafe {
 	private boolean empty; 
 	private boolean bioled; 
+	private static ChocolateBoilerThreadSafe uniqueInstance; 
 
-	ChocolateBoilerEnum() {
+	private ChocolateBoilerThreadSafe() {
 		empty = true;
 		bioled = false;
-	}
+	} 
+
+	public static synchronized ChocolateBoilerThreadSafe getInstance() {
+		if (uniqueInstance == null) {
+			uniqueInstance = new ChocolateBoilerThreadSafe(); 
+		} 
+		return uniqueInstance; 
+	} 
 
 	public void fill() {
 		if (isEmpty()) {
@@ -59,4 +55,4 @@ enum ChocolateBoilerEnum {
 	public boolean isBoiled() {
 		return bioled; 
 	} 
-}
+} 

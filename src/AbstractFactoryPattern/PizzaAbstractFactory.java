@@ -1,4 +1,4 @@
-package AbstractFactoryPattern;
+package abstractfactory;
 
 public class PizzaAbstractFactory {
 	public static void main(String[] args) {

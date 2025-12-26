@@ -1,4 +1,4 @@
-package DecoratorPattern;
+package decorator;
 
 public class StarbuzzCoffee {
 	public static void main(String[] args) {

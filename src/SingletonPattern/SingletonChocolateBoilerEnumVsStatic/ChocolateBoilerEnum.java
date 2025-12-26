@@ -1,4 +1,4 @@
-package SingletonChocolateBoilerEnumVsStatic; 
+package singleton.chocolateboilerenumvsstatic; 
 
 
 enum ChocolateBoilerEnum {

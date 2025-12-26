@@ -1,4 +1,4 @@
-package strategypaymentprocessing.strategies; 
+package strategy.paymentprocessing.strategies; 
 
 public class UPITransfer implements PaymentStrategyI {
 	private final String bankName;

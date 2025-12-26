@@ -1,3 +1,5 @@
+REM TODO: PATH-AND-COMMAND-FIXES
+
 @echo off
 echo ====================================================
 echo    Running All Java Design Pattern Examples

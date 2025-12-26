@@ -1,4 +1,4 @@
-package SingletonChocolateBoiler;
+package singleton.chocolateboiler;
 
 
 import java.util.function.Supplier;

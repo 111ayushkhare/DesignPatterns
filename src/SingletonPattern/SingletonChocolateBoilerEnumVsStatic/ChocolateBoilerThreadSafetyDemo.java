@@ -1,4 +1,4 @@
-package SingletonChocolateBoilerEnumVsStatic;
+package singleton.chocolateboilerenumvsstatic;
 
 public class ChocolateBoilerThreadSafetyDemo {
 	public static void main(String[] args) throws InterruptedException {

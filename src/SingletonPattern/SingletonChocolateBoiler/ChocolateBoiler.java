@@ -1,4 +1,4 @@
-package SingletonChocolateBoiler;
+package singleton.chocolateboiler;
 
 public class ChocolateBoiler {
 	private boolean empty; 

@@ -1,4 +1,4 @@
-package strategypaymentprocessing.strategies;
+package strategy.paymentprocessing.strategies;
 
 public class NetBankingTransfer implements PaymentStrategyI {
 	private final String bankName;
