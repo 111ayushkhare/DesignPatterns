@@ -72,6 +72,18 @@ IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerDemo.class (
     )
 )
 
+REM StrategyPattern
+IF EXIST StrategyPattern\StrategyPaymentProcessing\Driver.class (
+    echo [StrategyPattern] 
+    echo ----------------------------------------------------
+    cd StrategyPattern
+    echo >> PaymentPocessingStrategy
+    java StrategyPaymentProcessing.Driver
+    echo 
+    cd ..
+    echo ----------------------------------------------------
+)
+
 
 DEL source.txt
 

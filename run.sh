@@ -69,6 +69,18 @@ if [ -f SingletonPattern/SingletonChocolateBoiler/ChocolateBoilerDemo.class ] &&
   	echo "----------------------------------------------------"
 fi
 
+# Strategy Pattern
+if [ -f StrategyPattern/StrategyPaymentProcessing/Driver.class ]; then 
+	echo "[StrategyPattern]" 
+	echo "----------------------------------------------------"
+	echo ">> PaymentPocessingStrategy" 
+	cd ./StrategyPattern 
+	java StrategyPaymentProcessing.Driver
+	echo
+	cd ..
+	echo "----------------------------------------------------" 
+fi
+
 rm source.txt
 
 echo 
