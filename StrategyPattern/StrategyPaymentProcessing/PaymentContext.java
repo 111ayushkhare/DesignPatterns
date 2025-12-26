@@ -1,7 +1,7 @@
-package StrategyPaymentProcessing;
+package strategypaymentprocessing;
 
-import StrategyPaymentProcessing.strategies.*;
-import StrategyPaymentProcessing.enums.PaymentModes;
+import strategypaymentprocessing.strategies.*;
+import strategypaymentprocessing.enums.PaymentModes;
 
 
 class PaymentContext {

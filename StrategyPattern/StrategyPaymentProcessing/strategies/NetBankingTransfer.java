@@ -1,4 +1,4 @@
-package StrategyPaymentProcessing.strategies;
+package strategypaymentprocessing.strategies;
 
 public class NetBankingTransfer implements PaymentStrategyI {
 	private final String bankName;
@@ -9,6 +9,6 @@ public class NetBankingTransfer implements PaymentStrategyI {
 
 	@Override
 	public void makePayment(double amount) {
-		System.out.println("Payment of " + amount + " successful via " + this.bankName + " NetBanking"); 
+		System.out.println("Payment of " + amount + " processed via " + this.bankName + " NetBanking.");
 	}
 }

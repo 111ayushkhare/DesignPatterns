@@ -73,12 +73,12 @@ IF EXIST SingletonPattern\SingletonChocolateBoiler\ChocolateBoilerDemo.class (
 )
 
 REM StrategyPattern
-IF EXIST StrategyPattern\StrategyPaymentProcessing\Driver.class (
+IF EXIST StrategyPattern\strategypaymentprocessing\Driver.class (
     echo [StrategyPattern] 
     echo ----------------------------------------------------
     cd StrategyPattern
     echo >> PaymentPocessingStrategy
-    java StrategyPaymentProcessing.Driver
+    java strategypaymentprocessing.Driver
     echo 
     cd ..
     echo ----------------------------------------------------

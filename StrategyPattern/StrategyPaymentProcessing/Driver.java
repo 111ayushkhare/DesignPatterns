@@ -1,7 +1,7 @@
-package StrategyPaymentProcessing;
+package strategypaymentprocessing;
 
 
-import StrategyPaymentProcessing.enums.PaymentModes;
+import strategypaymentprocessing.enums.PaymentModes;
 
 
 public class Driver {

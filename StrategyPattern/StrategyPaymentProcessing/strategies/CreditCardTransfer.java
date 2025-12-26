@@ -1,4 +1,4 @@
-package StrategyPaymentProcessing.strategies;
+package strategypaymentprocessing.strategies;
  
 public class CreditCardTransfer implements PaymentStrategyI {
 	private final String cardName;
@@ -9,6 +9,6 @@ public class CreditCardTransfer implements PaymentStrategyI {
 
 	@Override
 	public void makePayment(double amount) {
-		System.out.println("Payment of " + amount + " successful via " + this.cardName + " credit card."); 
+		System.out.println("Payment of " + amount + " successful via " + this.cardName + " CreditCard"); 
 	}
 }

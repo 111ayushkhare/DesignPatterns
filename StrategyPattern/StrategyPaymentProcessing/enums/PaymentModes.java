@@ -1,4 +1,4 @@
-package StrategyPaymentProcessing.enums;
+package strategypaymentprocessing.enums;
 
 public enum PaymentModes {
 	UPI, 
