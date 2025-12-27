@@ -1,6 +1,10 @@
 package singleton.chocolateboilerenumvsstatic;
 
-public class ChocolateBoilerThreadSafetyDemo {
+
+import singleton.chocolateboilerenumvsstatic.enums.ChocolateBoilerEnum;
+import singleton.chocolateboilerenumvsstatic.boilers.ChocolateBoiler;
+
+public class Driver {
 	public static void main(String[] args) throws InterruptedException {
 		Runnable classicTask = () -> {
 			ChocolateBoiler instance = ChocolateBoiler.getInstance(); 

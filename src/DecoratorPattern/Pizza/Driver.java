@@ -1,6 +1,6 @@
-package decorator;
+package decorator.pizza;
 
-public class Pizza {
+public class Driver {
 	public static void main(String[] args) {
 		// Margherita + ExtraCheese 
 		BasePizza margheritaWithExtraCheesePizza = new ExtraCheese(new Margherita());

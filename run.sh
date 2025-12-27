@@ -20,50 +20,47 @@ echo "Running examples..."
 echo "----------------------------------------------------"
 
 # Decorator Pattern
-if [ -f ./out/classes/decorator/Pizza.class ] && [ -f ./out/classes/decorator/StarbuzzCoffee.class ]; then
+if [ -f ./out/classes/decorator/pizza/Driver.class ] && [ -f ./out/classes/decorator/starbuzzcoffee/Driver.class ]; then
 	echo "[DecoratorPattern]"
 	echo "----------------------------------------------------" 
 	echo ">> Pizza"
-	java -cp out/classes decorator.Pizza
+	java -cp out/classes decorator.pizza.Driver
 	echo 
 	echo ">> StarbuzzCoffee"
-	java -cp out/classes decorator.StarbuzzCoffee
+	java -cp out/classes decorator.starbuzzcoffee.Driver
 	echo "----------------------------------------------------"
 fi
 
 # Factory Pattern
-if [ -f ./out/classes/factory/PizzaFactory.class ]; then
+if [ -f ./out/classes/factory/pizza/Driver.class ]; then
   echo "[Factory Pattern]"
   echo "----------------------------------------------------" 
-  java -cp out/classes factory.PizzaFactory
+  java -cp out/classes factory.pizza.Driver
   echo "----------------------------------------------------"
 fi
 
 # Abstract Factory Pattern
-if [ -f ./out/classes/abstractfactory/PizzaAbstractFactory.class ]; then
+if [ -f ./out/classes/abstractfactory/pizza/Driver.class ]; then
   echo "[Abstract Factory Pattern]"
   echo "----------------------------------------------------" 
-  java -cp out/classes abstractfactory.PizzaAbstractFactory
+  java -cp out/classes abstractfactory.pizza.Driver
   echo "----------------------------------------------------"
 fi
 
 # Singleton Pattern
-if [ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerDemo.class ] && 
-	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoiler.class ] &&
-	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerThreadSafe.class ] &&
-	[ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerLockDoubleCheck.class ] &&
-	[ -f ./out/classes/singleton/chocolateboilerenum/ChocolateBoilerDemo.class ] && 
-	[ -f ./out/classes/singleton/chocolateboilerenumvsstatic/ChocolateBoilerThreadSafetyDemo.class ]; then
+if [ -f ./out/classes/singleton/chocolateboiler/Driver.class ] && 
+	[ -f ./out/classes/singleton/chocolateboilerenum/Driver.class ] && 
+	[ -f ./out/classes/singleton/chocolateboilerenumvsstatic/Driver.class ]; then
   	echo "[Singleton Pattern]"
   	echo "----------------------------------------------------" 
   	echo ">> ChocolateBoiler - by STATIC"
-  	java -cp out/classes singleton.chocolateboiler.ChocolateBoilerDemo
+  	java -cp out/classes singleton.chocolateboiler.Driver
   	echo
   	echo ">> ChocolateBoiler - By ENUM"
-  	java -cp out/classes singleton.chocolateboilerenum.ChocolateBoilerDemo
+  	java -cp out/classes singleton.chocolateboilerenum.Driver
   	echo
   	echo ">> ChocolateBoiler - ENUM vs STATIC"
-  	java -cp out/classes singleton.chocolateboilerenumvsstatic.ChocolateBoilerThreadSafetyDemo
+  	java -cp out/classes singleton.chocolateboilerenumvsstatic.Driver
   	echo "----------------------------------------------------"
 fi
 
@@ -77,6 +74,15 @@ if [ -f ./out/classes/strategy/paymentprocessing/Driver.class ] &&
 	echo
 	echo ">> FileCompressionUtility" 
 	java -cp out/classes strategy.filecompressionutils.Driver
+	echo "----------------------------------------------------" 
+fi
+
+# Builder Pattern
+if [ -f ./out/classes/builder/httprequestbuilder/Driver.class ]; then 
+	echo "[BuilderPattern]" 
+	echo "----------------------------------------------------"
+	echo ">> HttpRequestBuilder" 
+	java -cp out/classes builder.httprequestbuilder.Driver
 	echo "----------------------------------------------------" 
 fi
 

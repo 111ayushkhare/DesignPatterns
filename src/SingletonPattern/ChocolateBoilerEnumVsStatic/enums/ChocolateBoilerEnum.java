@@ -1,21 +1,16 @@
-package singleton.chocolateboilerenumvsstatic;
+package singleton.chocolateboilerenumvsstatic.enums; 
 
-class ChocolateBoiler {
+
+public enum ChocolateBoilerEnum {
+	INSTANCE; 
+
 	private boolean empty; 
 	private boolean bioled; 
-	private static ChocolateBoiler uniqueInstance; 
 
-	private ChocolateBoiler() {
+	ChocolateBoilerEnum() {
 		empty = true;
 		bioled = false;
-	} 
-
-	public static ChocolateBoiler getInstance() {
-		if (uniqueInstance == null) {
-			uniqueInstance = new ChocolateBoiler(); 
-		} 
-		return uniqueInstance; 
-	} 
+	}
 
 	public void fill() {
 		if (isEmpty()) {
@@ -55,4 +50,4 @@ class ChocolateBoiler {
 	public boolean isBoiled() {
 		return bioled; 
 	} 
-} 
+}

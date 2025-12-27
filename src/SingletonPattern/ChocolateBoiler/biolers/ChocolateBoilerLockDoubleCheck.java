@@ -1,19 +1,24 @@
-package singleton.chocolateboiler;
+package singleton.chocolateboiler.boilers;
 
-public class ChocolateBoilerThreadSafe {
+
+public class ChocolateBoilerLockDoubleCheck{
 	private boolean empty; 
 	private boolean bioled; 
-	private static ChocolateBoilerThreadSafe uniqueInstance; 
+	private volatile static ChocolateBoilerLockDoubleCheck uniqueInstance; 
 
-	private ChocolateBoilerThreadSafe() {
+	private ChocolateBoilerLockDoubleCheck() {
 		empty = true;
 		bioled = false;
 	} 
 
-	public static synchronized ChocolateBoilerThreadSafe getInstance() {
+	public static ChocolateBoilerLockDoubleCheck getInstance() {
 		if (uniqueInstance == null) {
-			uniqueInstance = new ChocolateBoilerThreadSafe(); 
-		} 
+			synchronized (ChocolateBoilerLockDoubleCheck.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new ChocolateBoilerLockDoubleCheck(); 
+				} 
+			} 
+		}
 		return uniqueInstance; 
 	} 
 

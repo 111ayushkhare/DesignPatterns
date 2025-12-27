@@ -1,9 +1,9 @@
-package factory;
+package factory.pizza;
 
 import java.util.List; 
 import java.util.ArrayList; 
 
-public class PizzaFactory {
+public class Driver {
 	public static void main(String[] args) {
 		PizzaStore nyPizzaStore = new NYPizzaStore();
 		PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
