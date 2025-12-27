@@ -68,11 +68,15 @@ if [ -f ./out/classes/singleton/chocolateboiler/ChocolateBoilerDemo.class ] &&
 fi
 
 # Strategy Pattern
-if [ -f ./out/classes/strategy/paymentprocessing/Driver.class ]; then 
+if [ -f ./out/classes/strategy/paymentprocessing/Driver.class ] && 
+	[ -f ./out/classes/strategy/filecompressionutils/Driver.class ]; then 
 	echo "[StrategyPattern]" 
 	echo "----------------------------------------------------"
 	echo ">> PaymentPocessingStrategy" 
 	java -cp out/classes strategy.paymentprocessing.Driver
+	echo
+	echo ">> FileCompressionUtility" 
+	java -cp out/classes strategy.filecompressionutils.Driver
 	echo "----------------------------------------------------" 
 fi
 
