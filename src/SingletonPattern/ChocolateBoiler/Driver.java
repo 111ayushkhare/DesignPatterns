@@ -3,7 +3,9 @@ package singleton.chocolateboiler;
 
 import java.util.function.Supplier;
 
-public class ChocolateBoilerDemo {
+import singleton.chocolateboiler.boilers.*;
+
+public class Driver {
     public static void main(String[] args) {
         System.out.println("=== Normal Chocolate Boiler ===");
         runBoilerExample(() -> ChocolateBoiler.getInstance());

@@ -1,6 +1,6 @@
-package decorator;
+package decorator.starbuzzcoffee;
 
-public class StarbuzzCoffee {
+public class Driver {
 	public static void main(String[] args) {
 		Espresso espresso = new Espresso();
 		DarkRoast darkRoast = new DarkRoast();

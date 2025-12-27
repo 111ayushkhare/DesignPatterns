@@ -1,6 +1,6 @@
-package abstractfactory;
+package abstractfactory.pizza;
 
-public class PizzaAbstractFactory {
+public class Driver {
 	public static void main(String[] args) {
 		PizzaStore nyPizzaStore = new NYPizzaStore();
 		PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
