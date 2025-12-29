@@ -78,11 +78,15 @@ if [ -f ./out/classes/strategy/paymentprocessing/Driver.class ] &&
 fi
 
 # Builder Pattern
-if [ -f ./out/classes/builder/httprequestbuilder/Driver.class ]; then 
+if [ -f ./out/classes/builder/httprequestbuilder/Driver.class ] && 
+	[ -f ./out/classes/builder/sqlquerybuilder/Driver.class ]; then 
 	echo "[BuilderPattern]" 
 	echo "----------------------------------------------------"
 	echo ">> HttpRequestBuilder" 
 	java -cp out/classes builder.httprequestbuilder.Driver
+	echo
+	echo ">> SqlQueryBuilder"
+	java -cp out/classes builder.sqlquerybuilder.Driver
 	echo "----------------------------------------------------" 
 fi
 
